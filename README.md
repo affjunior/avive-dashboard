@@ -1,27 +1,92 @@
-# Avive
+# Avive Dashboard | realconnect | Rebranding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+[![Dashboard init][cover]][avive_dashboard]
 
-## Development server
+rebranding do dashboard do realconnect
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Project created with Angular 17.3.0 and RxJS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 1. Getting Started
 
-## Running unit tests
+First, run
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+npm install
+```
 
-## Running end-to-end tests
+to install all the dependencies.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To run the game locally on a development server, you can run the following
+command:
 
-## Further help
+```sh
+npm start
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To build the app, run the following command:
+
+```sh
+npm run build
+```
+
+## Linting and Formatting
+
+To check for any linting issues, you can run the following command:
+
+```sh
+npm run lint
+```
+
+To fix automatically fixable linting issues, run:
+
+```sh
+npm run lint:fix
+```
+
+To check for any formatting issues, you can run the following command:
+
+```sh
+npm run format:check
+```
+
+To format all files to conform to the project's Prettier configuration, you can
+run:
+
+```sh
+npm run format
+```
+
+## Running Tests
+
+To run unit tests mode, run:
+
+```sh
+npm run test
+```
+
+To generate a coverage report, you can run
+
+```sh
+npm run test:coverage
+```
+
+## Screen comparison
+
+Old version
+[![Dashboard init old][cover]][avive_dashboard_init_old]
+
+[![Dashboard create org old][cover]][avive_create_org_old]
+
+New Version
+[![Dashboard init old][cover]][imgs/dashboard.png]
+
+[![Create Org][cover]][avive_dashboard]
+
+[avive_dashboard]: imgs/organization.png
+[avive_dashboard_init_old]: imgs/Avive Old.png
+[avive_create_org_old]: imgs/Avive Old 2.png
+[avive_create_org_new]: imgs/dashboard.png
