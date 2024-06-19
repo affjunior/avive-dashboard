@@ -1,18 +1,18 @@
-<mat-sidenav-container class="mainWrapper" autosize autoFocus [ngClass]="{
+<mat-sidenav-container class="mainWrapper" style="overflow: auto;" autosize autoFocus [ngClass]="{
     'sidebarNav-mini': options.sidenavCollapsed && options.navPos !== 'top' &&  !resView,
     'sidebarNav-horizontal': options.horizontal,
     cardBorder: options.cardBorder
   }" [dir]="options.dir!">
 
   @if(true) {
-  <mat-sidenav #leftsidenav [mode]="'side'"
+  <mat-sidenav [ngStyle]="{'min-height.px': height}" #leftsidenav [mode]="'side'"
     [opened]="options.navPos === 'side' && options.sidenavOpened && !isOver && !resView"
     (openedChange)="onSidenavOpenedChange($event)" 
     (closedStart)="onSidenavClosedStart()" class="sidebarNav" style="margin-top: 70px;">
     <div class="flex-layout">
       <app-sidebar (toggleMobileNav)="sidenav.toggle()" [showToggle]="isOver"></app-sidebar>
       <ng-scrollbar class="position-relative" style="height: 100%">
-        <mat-nav-list class="sidebar-list">
+        <mat-nav-list style="margin-top: 15px;" class="sidebar-list">
           @for(item of navItems; track item) {
           <app-nav-item [item]="item" (notify)="sidenav.toggle()">
           </app-nav-item>
@@ -28,7 +28,7 @@
 
 
 
-    <main class="pageWrapper" [ngClass]="{
+    <main #main class="pageWrapper" [ngClass]="{
         maxWidth: options.boxed
       }">
       <router-outlet></router-outlet>

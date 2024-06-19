@@ -1,7 +1,7 @@
 import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { MatSidenav } from '@angular/material/sidenav';
+import { MatSidenav, MatSidenavContainer } from '@angular/material/sidenav';
 import { navItems } from './vertical/sidebar/sidebar-data';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { AppHorizontalHeaderComponent } from './horizontal/header/header.component';
@@ -36,7 +36,7 @@ const BELOWMONITOR = 'screen and (max-width: 1023px)';
   styleUrls: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, AfterViewInit {
   navItems = navItems;
   @ViewChild('leftsidenav')
   public sidenav: MatSidenav;
@@ -49,6 +49,8 @@ export class LayoutComponent implements OnInit {
   private isContentWidthFixed = true;
   private isCollapsedWidthFixed = false;
   private htmlElement!: HTMLHtmlElement;
+  @ViewChild('main') main: ElementRef;
+  height: number = 0;
 
   get isOver(): boolean {
     return this.isMobileScreen;
@@ -81,6 +83,16 @@ export class LayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  ngAfterViewInit() {
+    this.getHeight();
+  }
+
+  getHeight() {
+    this.height = this.main.nativeElement.offsetHeight;
+
+    return this.height;
+  }
 
   ngOnDestroy() {
     this.layoutChangesSubscription.unsubscribe();
