@@ -1,6 +1,8 @@
 # Avive Dashboard | realconnect | Rebranding
 
-[Dashboard init](imgs/dashboard.png)
+<p align="center">
+  <img alt="realconnect Rebranding " src="imgs/dashboard.png">
+</p>
 
 rebranding do dashboard do realconnect
 
@@ -78,14 +80,24 @@ npm run test:coverage
 
 Old version
 
-![Dashboard init old](imgs/Avive Old.png)
+<p align="center">
+  <img alt="Dashboard init old" src="imgs/Avive Old.png">
+</p>
 
-![Dashboard create org old](imgs/Avive Old 2.png)
 
-New Version
-![Dashboard init old](imgs/dashboard.png)
+<p align="center">
+  <img alt="Dashboard create org old" src="imgs/Avive Old 2.png">
+</p>
 
-[Create Org](imgs/organization.png)
+
+<p align="center">
+  <img alt="Dashboard new" src="imgs/dashboard.png">
+</p>
+
+
+<p align="center">
+  <img alt="Create org" src="imgs/organization.png">
+</p>
 
 
 [avive_dashboard]: imgs/organization.png
