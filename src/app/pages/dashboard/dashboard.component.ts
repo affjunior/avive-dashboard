@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,8 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  addEvent() {
-    console.log('Add event');
+
+  constructor(private router: Router) {}
+
+  navigateToOrganization() {
+    this.router.navigate(['/organization']); // Step 3: Use navigate method
   }
 
   btnCategoryClick(event: any) {
