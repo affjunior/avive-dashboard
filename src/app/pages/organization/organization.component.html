@@ -1,0 +1,165 @@
+<div class="row">
+  <form [formGroup]="organizationForm" (ngSubmit)="onSubmit()" class="col-lg-12">
+    <mat-card class="cardWithShadow theme-card">
+      <mat-card-header>
+      <mat-card-title class="m-b-0">Create Organization</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="b-t-1">
+      <h4 class="f-s-16 m-0 f-w-600 m-b-16">Organization Details</h4>
+
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+        <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >Organization name
+        </mat-label>
+        </div>
+        <div class="col-sm-8 col-lg-8">
+        <mat-form-field appearance="outline" class="w-100">
+          <input matInput placeholder="ACME Inc." formControlName="name" required />
+          <mat-icon matPrefix class="op-5">
+          <i-tabler
+            name="building-arch"
+            class="icon-20 d-flex"
+          ></i-tabler>
+          </mat-icon>
+        </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >Phone no
+          </mat-label>
+        </div>
+        <div class="col-sm-8">
+          <mat-form-field appearance="outline" class="w-100">
+          <input matInput placeholder="123 4567 123" formControlName="phone" required />
+          <mat-icon matPrefix class="op-5">
+            <i-tabler name="phone" class="icon-20 d-flex"></i-tabler>
+            </mat-icon>
+          </mat-form-field>
+        </div>
+        </div>
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+        <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >Email</mat-label
+        >
+        </div>
+        <div class="col-sm-8">
+        <mat-form-field appearance="outline" class="w-100">
+          <input matInput placeholder="john.deo" type="email" formControlName="email" required />
+          <mat-icon matPrefix class="op-5">
+          <i-tabler name="mail" class="icon-20 d-flex"></i-tabler>
+          </mat-icon>
+        </mat-form-field>
+        </div>
+      </div>
+      </mat-card-content>
+      <mat-card-content class="b-t-1">
+      <h4 class="f-s-16 m-0 f-w-600 m-b-16">Organization Info</h4>
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+        <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >Street Address
+        </mat-label>
+        </div>
+        <div class="col-sm-8">
+        <mat-form-field appearance="outline" class="w-100">
+          <input matInput placeholder="Street Address" required />
+          <mat-icon matPrefix class="op-5">
+          <i-tabler name="home" class="icon-20 d-flex"></i-tabler>
+          </mat-icon>
+        </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >Unit
+          </mat-label>
+        </div>
+        <div class="col-sm-8">
+          <mat-form-field appearance="outline" class="w-100">
+          <input matInput placeholder="Unit A" required />
+          <mat-icon matPrefix class="op-5">
+            <i-tabler name="building-community" class="icon-20 d-flex"></i-tabler>
+          </mat-icon>
+          </mat-form-field>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >City
+          </mat-label>
+        </div>
+        <div class="col-sm-8">
+          <mat-form-field appearance="outline" class="w-100">
+          <input matInput placeholder="City" required />
+          <mat-icon matPrefix class="op-5">
+            <i-tabler name="building-skyscraper" class="icon-20 d-flex"></i-tabler>
+            </mat-icon>
+          </mat-form-field>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >State
+          </mat-label>
+        </div>
+        <div class="col-sm-8">
+          <mat-form-field appearance="outline" class="w-100">
+          <mat-select value="0" required>
+            <mat-option value="0">Flórida</mat-option>
+            <mat-option value="1">New York</mat-option>
+          </mat-select>
+          </mat-form-field>
+          <mat-icon matPrefix class="op-5">
+            <i-tabler name="state" class="icon-20 d-flex"></i-tabler>
+          </mat-icon>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+          <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >Zipcode
+          </mat-label>
+        </div>
+        <div class="col-sm-8">
+          <mat-form-field appearance="outline" class="w-100">
+          <input matInput placeholder="Unit A" required />
+          <mat-icon matPrefix class="op-5">
+            <i-tabler name="zip" class="icon-20 d-flex"></i-tabler>
+            </mat-icon>
+          </mat-form-field>
+        </div>
+        </div>
+      <div class="row">
+        <div class="col-sm-4 d-flex align-items-center">
+        <mat-label class="mat-subtitle-2 f-w-600 d-block m-b-24"
+          >Country
+        </mat-label>
+        </div>
+        <div class="col-sm-8">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-select value="0" required>
+          <mat-option value="0">United States</mat-option>
+          <mat-option value="1">Canada</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-icon matPrefix class="op-5">
+          <i-tabler name="country" class="icon-20 d-flex"></i-tabler>
+          </mat-icon>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-sm-8">
+        <button mat-flat-button color="primary">Submit</button>
+        </div>
+      </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
+  addEvent() {
+    console.log('Add event');
+  }
 
+  btnCategoryClick(event: any) {
+    console.log('Button category click');
+  }
 }

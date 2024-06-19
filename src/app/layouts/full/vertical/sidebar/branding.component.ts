@@ -9,7 +9,7 @@ import { CoreService } from '../../../../service/core.service';
         <a href="/">
           <img
             src="./assets/images/logo/avive-solutions-logo.png" 
-            class="align-middle m-2 w-100"
+            class="align-middle m-2 wi-100"
             alt="logo"
           />
         </a>
